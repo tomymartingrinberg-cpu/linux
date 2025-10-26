@@ -1,0 +1,23 @@
+# Lista de paquetes básicos para instalar en la imagen (editar según preferencias)
+# Formato: un paquete por línea
+
+# Escritorio (descomenta la que prefieras)
+# ubuntu-desktop        # GNOME completo (pesado)
+# xubuntu-desktop       # XFCE (ligero)
+# lubuntu-desktop       # LXQt (muy ligero)
+# kde-plasma-desktop    # KDE Plasma
+
+network-manager
+openssh-server
+vim
+curl
+wget
+ca-certificates
+sudo
+gdebi-core
+# codecs (si querés multimedia)
+# ubuntu-restricted-extras
+
+# Herramientas de desarrollo comunes (opcional)
+build-essential
+git
