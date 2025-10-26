@@ -1,0 +1,45 @@
+name: Commit build artifacts
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 4 * * *' # ejecutar diariamente a las 04:00 UTC (opcional)
+
+permissions:
+  contents: write
+
+jobs:
+  commit-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      # Ajusta la ruta a la carpeta que quieres commitear (p.ej. build-output/)
+      - name: Prepare artifacts (example)
+        run: |
+          # Aquí podrías copiar artefactos de la ejecución anterior o generar archivos.
+          # Este paso es un ejemplo; en un pipeline real colocarías los archivos dentro de build-output/.
+          mkdir -p build-output
+          echo "Artefactos de build - $(date -u)" > build-output/BUILD_INFO.txt
+
+      - name: Add and commit changes
+        run: |
+          git add build-output || true
+          if git diff --cached --quiet; then
+            echo "No hay cambios para commitear."
+            exit 0
+          fi
+          git commit -m "CI: actualizar artefactos de build [skip ci]"
+
+      - name: Push changes
+        run: |
+          git push origin HEAD:main
