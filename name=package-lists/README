@@ -1,0 +1,8 @@
+Organiza listas de paquetes por propósito soportadas por live-build:
+
+- custom.list.chroot         -> lista principal (ya incluida)
+- desktop.list.chroot        -> paquetes para el entorno de escritorio
+- minimal.list.chroot        -> paquetes mínimos para una imagen ligera
+- dev.list.chroot            -> herramientas de desarrollo
+
+Cada archivo .list.chroot debe contener un paquete por línea. Coloca los archivos en package-lists/ para que live-build los use.
