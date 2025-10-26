@@ -1,0 +1,11 @@
+# Archivos generados por live-build / construcción
+live-image-*.iso
+*.hybrid.iso
+live-build-config/
+lb-*.log
+*.log
+build-output/
+
+# Archivos de sistema
+.DS_Store
+*.swp
