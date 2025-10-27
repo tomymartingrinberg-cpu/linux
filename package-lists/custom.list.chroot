@@ -1,0 +1,6 @@
+# Lista de paquetes a instalar en el entorno chroot
+curl
+git
+vim
+nano
+htop
