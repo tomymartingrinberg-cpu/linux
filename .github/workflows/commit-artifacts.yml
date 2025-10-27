@@ -1,0 +1,24 @@
+name: Commit Artifacts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Ejecutar build.sh
+        run: |
+          chmod +x ./build.sh
+          ./build.sh
+
+      - name: Subir artefactos
+        run: |
+          chmod +x ./upload_all.sh
+          ./upload_all.sh
