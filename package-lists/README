@@ -1,0 +1,3 @@
+# Lista de paquetes personalizados para la construcción de la imagen.
+
+Este archivo contiene los paquetes que se instalarán en el entorno chroot durante la construcción del sistema.
