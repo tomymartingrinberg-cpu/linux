@@ -1,0 +1,7 @@
+# Ignorar directorios de construcción
+build/
+output/
+
+# Ignorar archivos temporales de editor
+*.swp
+*~
