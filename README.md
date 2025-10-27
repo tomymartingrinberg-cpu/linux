@@ -1,4 +1,3 @@
-```markdown
 # Newux — Plantilla para crear una distribución basada en Ubuntu
 
 Descripción
@@ -28,7 +27,7 @@ Cómo usar
 2. Clona el repo localmente:
    git clone git@github.com:<tu-usuario>/Newux.git
    cd Newux
-3. Copia/pega estos archivos en el directorio del repo o sube desde la interfaz web.
+3. Copia/pega estos archivos en el directorio del repo o súbelos desde la interfaz web.
 4. Para subir todo desde tu máquina local con un script (rápido):
    chmod +x upload_all.sh
    ./upload_all.sh "Mensaje de commit inicial"
@@ -45,4 +44,5 @@ Advertencias importantes
 - No publiques logos/branding de Ubuntu sin permiso si piensas redistribuir la ISO.
 - Revisa y ajusta usuarios/contraseñas del hook antes de usar en producción.
 - Si habilitas push automático desde Actions, asegúrate de comprender la política de commits y CI para evitar commits infinitos.
-```
+
+---
